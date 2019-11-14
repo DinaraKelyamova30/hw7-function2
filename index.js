@@ -1,10 +1,14 @@
-function f(n, g) {
+//геометрична прогресія
+function f(n, q) {
+    sum = 0;
+    i = 0;
     b1 = 1;
-    for (let i = 1; i <= n; i++) {
-        b1 *= g;
+    while (i < n) {
+        sum = sum + b1;
+        b1 = b1 * q;
+        i = i + 1;
     }
-    return (b1);
+    return sum
 }
-
 console.log(f(5, 2));
 console.log(f(4, 3));
